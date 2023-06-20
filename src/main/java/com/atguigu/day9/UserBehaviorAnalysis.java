@@ -39,13 +39,13 @@ public class UserBehaviorAnalysis {
                 .filter(r -> r.behavior.equals("pv")) //过滤PV
                 .assignTimestampsAndWatermarks(
                         WatermarkStrategy.<UserBehavior>forMonotonousTimestamps()
-                        .withTimestampAssigner(new SerializableTimestampAssigner<UserBehavior>() {
-                            @Override
-                            public long extractTimestamp(UserBehavior userBehavior, long l) {
-                                //升序时间戳
-                                return userBehavior.timestamp;
-                            }
-                        })
+                                .withTimestampAssigner(new SerializableTimestampAssigner<UserBehavior>() {
+                                    @Override
+                                    public long extractTimestamp(UserBehavior userBehavior, long l) {
+                                        //升序时间戳
+                                        return userBehavior.timestamp;
+                                    }
+                                })
                 );
 
         stream

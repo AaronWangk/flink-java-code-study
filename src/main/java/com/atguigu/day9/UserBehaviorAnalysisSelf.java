@@ -64,9 +64,6 @@ public class UserBehaviorAnalysisSelf {
                 .keyBy(itemViewCount -> itemViewCount.windowEnd)
                 .process(new TopN(3))
 
-
-
-
                 .print();
         env.execute();
     }
