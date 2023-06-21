@@ -143,7 +143,7 @@ public class UserBehaviorAnalysisSelf {
         }
     }
 
-    public static class CountAgg implements AggregateFunction<UserBehavior, Long, Long> {
+    private static class CountAgg implements AggregateFunction<UserBehavior, Long, Long> {
 
         @Override
         public Long createAccumulator() {
