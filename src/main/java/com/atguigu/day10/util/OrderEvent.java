@@ -1,5 +1,9 @@
 package com.atguigu.day10.util;
 
+
+/**
+ * 订单支付事件
+ */
 public class OrderEvent {
     public String orderId;
     public String eventType;

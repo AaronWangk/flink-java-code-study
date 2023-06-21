@@ -1,5 +1,8 @@
 package com.atguigu.day10.util;
-
+/**
+ * 第三方机构的支付事件
+ * weixin zhifubao
+ */
 public class PayEvent {
     public String orderId;
     public String eventType;
